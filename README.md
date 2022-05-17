@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Battletech Show Mech Affinity
 
 An extension for the Mech Affinity mod.  This mod shows which pilots have an affinity with a specific chassis.
@@ -37,6 +36,3 @@ This assumes ModTek has been installed and injected.
 
 # Compatibility
 This should be compatible with all mods.
-=======
-BTShowMechAffinity
->>>>>>> parent of 6c66058 (Update README.md)

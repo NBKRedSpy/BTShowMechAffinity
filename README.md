@@ -1,7 +1,7 @@
 # Battletech Show Mech Affinity
 
 An extension for the Mech Affinity mod.  This mod shows which pilots have an affinity with a specific chassis.
-Rather than opening each tool tip for a pilot to determine if they have an affinity, the pilot list will be colored and sorted by level of affinity for the selected mech.
+Rather than searching pilots for chassis affinity via the tool tips, the pilot list will be colored and sorted by level of affinity for the selected mech.
 
 ![image](https://user-images.githubusercontent.com/54865934/168877225-4e1c38bc-c505-4dfa-a907-c60781d66cc6.png)
 

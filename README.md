@@ -5,12 +5,10 @@ Rather than searching pilots for chassis affinity via the tool tips, the pilot l
 
 ![image](https://user-images.githubusercontent.com/54865934/168877225-4e1c38bc-c505-4dfa-a907-c60781d66cc6.png)
 
-When in the contract loadout screen, click on a mech to show the pilot affinities.
-
 ## Usage
-When in the contract loadout screen, click on a mech and all the pilots will have the rank icon changed to a color baseD on the pilot's affinity.
+When in the contract loadout screen, click on a mech and all the pilots will have their rank icon changed to a color based on the pilot's affinity.
 
-The pilots on the right of the screen will also be sorted by the  number of drops with the selected mech and then by name.
+The pilots on the right of the screen will also be sorted by the number of drops with the selected mech and then by name.
 
 
 ## The affinity colors are:

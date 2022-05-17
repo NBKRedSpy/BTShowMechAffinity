@@ -1,12 +1,16 @@
 # Battletech Show Mech Affinity
 
-This mod makes it easier to determine which pilot has an affinity with a specific chassis.
-
-When in the contract loadout screen, click on a mech and all the pilots will have the rank icon changed to a color bases on the pilot's affinity.
-
-The pilots on the right of the screen will also be sorted by the  number of drops with the selected mech and then by name.
+An extension for the Mech Affinity mod.  This mod shows which pilots have an affinity with a specific chassis.
+Rather than opening each tool tip for a pilot to determine if they have an affinity, the pilot list will be colored and sorted by level of affinity for the selected mech.
 
 ![image](https://user-images.githubusercontent.com/54865934/168877225-4e1c38bc-c505-4dfa-a907-c60781d66cc6.png)
+
+When in the contract loadout screen, click on a mech to show the pilot affinities.
+
+## Usage
+When in the contract loadout screen, click on a mech and all the pilots will have the rank icon changed to a color baseD on the pilot's affinity.
+
+The pilots on the right of the screen will also be sorted by the  number of drops with the selected mech and then by name.
 
 
 ## The affinity colors are:

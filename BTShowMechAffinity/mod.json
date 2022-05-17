@@ -1,0 +1,16 @@
+{
+  "Name": "BTShowMechAffinity",
+  "Version": "1.0.0.0",
+  "Description": "Shows the pilot's mech affinity when in the contract loadout screen.",
+  "Author": "NBK_RedSpy",
+  "Website": "https://github.com/NBKRedSpy/BTShowMechAffinity",
+
+  "Enabled": true,
+
+  "DLL": "BTShowMechAffinity.dll",
+  "DependsOn": [ "MechAffinity" ],
+
+  "Settings": {
+  }
+
+}

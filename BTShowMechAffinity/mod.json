@@ -1,6 +1,6 @@
 {
   "Name": "BTShowMechAffinity",
-  "Version": "1.0.0.0",
+  "Version": "1.1.0.0",
   "Description": "Shows the pilot's mech affinity when in the contract loadout screen.",
   "Author": "NBK_RedSpy",
   "Website": "https://github.com/NBKRedSpy/BTShowMechAffinity",
@@ -11,6 +11,14 @@
   "DependsOn": [ "MechAffinity" ],
 
   "Settings": {
+    "AffinityColors": [
+      {"deploymentCountMax": 0, "Color":  "#000000"},
+      {"deploymentCountMax": 9, "Color":  "#BABABA"},
+      {"deploymentCountMax": 19, "Color":  "#309231"},
+      {"deploymentCountMax": 29, "Color":  "#4d51f8"},
+      {"deploymentCountMax": 49, "Color":  "#A335EE"},
+      {"deploymentCountMax": 9999999, "Color":  "#FF8000"}
+    ]
   }
 
 }

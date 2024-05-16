@@ -11,7 +11,7 @@ When in the contract loadout screen, click on a mech and all the pilots will hav
 The pilots on the right of the screen will also be sorted by the number of drops with the selected mech and then by name.
 
 
-## The affinity colors are:
+## Default Affinity Colors:
 
 |Affinity level| color|
 |--|--|
@@ -20,7 +20,33 @@ The pilots on the right of the screen will also be sorted by the number of drops
 | < 20| Green|
 | < 30| Blue|
 | < 50| Purple|
-| >= 50| Gold|
+| >= 50| Orange|
+
+## User Custom Colors
+
+The colors can be set by editing the BATTLETECH\Mods\BTShowMechAffinity\mod.json file.
+
+```json
+  "Settings": {
+    "AffinityColors": [
+      {"deploymentCountMax": 0, "Color":  "#000000"},
+      {"deploymentCountMax": 9, "Color":  "#BABABA"},
+      {"deploymentCountMax": 19, "Color":  "#309231"},
+      {"deploymentCountMax": 29, "Color":  "#4d51f8"},
+      {"deploymentCountMax": 49, "Color":  "#A335EE"},
+      {"deploymentCountMax": 9999999, "Color":  "#FF8000"}
+```
+
+The mech affinity is based on the number of deployments a pilot has in a chassis.  The color selection is based on the deployment count vs the deploymentCountMax value in numeric order.
+
+In the example above, if the pilot has a deployment count of 23, the color will be #4d51f8 since it is greater than 19 and less than or equal to 29.  
+
+The Color is an HTML color.  The website https://htmlcolorcodes.com/color-picker/ has a useful color picker.
+
+The last entry uses 9999999 to cover an affinity of 50 or more.
+
+Note that the default list does not have a 40 entry (30-39) since the MechAffinity mod data does not have a bonus at that level.
+
 
 # Requirements
 Requires the Mech Affinity mod to be installed.  Some Battletech projects will already have it installed.  For example, Battletech Extended Comander Edition has Mech Affinity installed.
@@ -37,3 +63,11 @@ This assumes ModTek has been installed and injected.
 # Compatibility
 This should be compatible with all mods.
 Safe to add to and remove from existing saves.
+
+# Change Log
+
+## 1.1.0
+* Added user defined colors.
+* Corrected the purple color showing as red.
+
+Thanks to the NexusMod users fys and synopse8 for reporting the color issues as well as requesting color customization.

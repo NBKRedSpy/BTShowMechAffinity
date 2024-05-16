@@ -40,8 +40,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="MechAffinity">
-      <HintPath>E:\Games\Steam\steamapps\common\BATTLETECH\Mods\MechAffinity\MechAffinity.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>D:\Games\Steam\steamapps\common\BATTLETECH\Mods\MechAffinity\MechAffinity.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -73,7 +72,9 @@
     <Compile Include="HarmonyInit.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Patches\AffinityHighlight.cs" />
+    <Compile Include="Patches\AffinityColor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="mod.json">
@@ -82,7 +83,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>robocopy /r:0 . "E:\Games\Steam\steamapps\common\BATTLETECH\Mods\$(ProjectName)" $(ProjectName).dll $(ProjectName).pdb
+    <PostBuildEvent>robocopy /r:0 . "D:\Games\Steam\steamapps\common\BATTLETECH\Mods\$(ProjectName)" $(ProjectName).dll $(ProjectName).pdb
 IF NOT ERRORLEVEL 0 (echo copy error &amp; exit /b)
 rd /q /s  $(ProjectName)
 robocopy /r:0 . $(ProjectName) $(ProjectName).dll mod.json

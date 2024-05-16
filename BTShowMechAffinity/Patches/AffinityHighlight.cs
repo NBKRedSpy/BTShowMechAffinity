@@ -37,6 +37,13 @@ namespace BTShowMechAffinity.Patches
         /// </summary>
         public static bool MechAffinityIsLoaded { get; set; }
 
+        /// <summary>
+        /// The affinity colors.  Expected to be sorted by max deployments
+        /// </summary>
+        public static List<AffinityColor> AffinityColors { get; set; }
+
+
+
         public static void Postfix(LanceConfiguratorPanel __instance, IMechLabDraggableItem item)
         {
             try
@@ -140,30 +147,19 @@ namespace BTShowMechAffinity.Patches
         }
         public static void SetDeploymentCountColor(UIColorRefTracker pilotColor, SimGameState simulation, int deploymentCount)
         {
-            if (deploymentCount == 0)
+            foreach (var color in AffinityColors)
             {
-                pilotColor.OverrideWithColor(Color.black);
+                
+                if(deploymentCount <= color.DeploymentCountMax )
+                {
+                    pilotColor.OverrideWithColor(color.UnityColor);
+
+                    //Logger.Log($"Color found: {deploymentCount} {color.DeploymentCountMax}");
+                    return;
+                }
             }
-            else if (deploymentCount < 10)
-            {
-                pilotColor.OverrideWithColor(Color.grey);
-            }
-            else if (deploymentCount < 20)
-            {
-                pilotColor.OverrideWithColor(new Color(48 / 255f, 146 / 255f, 49 / 255f)); //Soft Green
-            }
-            else if (deploymentCount < 30)
-            {
-                pilotColor.OverrideWithColor(new Color(77 / 255f, 81 / 255f, 248 / 255f));    //Softer blue
-            }
-            else if (deploymentCount < 50)
-            {
-                pilotColor.OverrideWithColor(new Color(282 / 255f, 59 / 255f, 73 / 255f)); //Purple
-            }
-            else
-            {
-                pilotColor.OverrideWithColor(new Color(242 / 255f, 175 / 255f, 27 / 255f));    //Orange-gold
-            }
+
+            //Logger.Log($"Color not found: {deploymentCount}");
         }
     }
 
